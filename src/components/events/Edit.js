@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
 
-export default class EventNew extends Component {
+export default class EventEdit extends Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
   }
+
+  componentDidMount() {
+    const { id } = this.props.match.params;
+    if (id) this.props.readEvent(id);
+  }
+
   renderField(field) {
     const { input, label, type, meta: { touched, error } } = field;
 
@@ -19,7 +25,7 @@ export default class EventNew extends Component {
   }
 
   async onSubmit(values) {
-    await this.props.createEvent(values);
+    await this.props.updateEvent(values);
     this.props.history.push('/');
   }
 

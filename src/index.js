@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import createStore from './createStore';
 import EventList from './containers/events/List';
 import EventNew from './containers/events/New';
+import EventEdit from './containers/events/Edit';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const history = createBrowserHistory();
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/events/new" component={EventNew} />
         <Route exact path="/" component={EventList} />
+        <Route exact path="/events/:id/edit" component={EventEdit} />
         <Route exact path="/events" component={EventList} />
       </Switch>
     </ConnectedRouter>
