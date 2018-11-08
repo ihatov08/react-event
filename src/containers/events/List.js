@@ -3,7 +3,7 @@ import List from '../../components/events/List';
 import * as actions from '../../actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  events: state.Event.events
+  events: state.Event
 });
 
 const mapDispatchToProps = dispatch => ({
