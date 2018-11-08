@@ -1,0 +1,9 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "title",
+      "body": "body"
+    }
+  ]
+}
