@@ -23,6 +23,9 @@ const mapDispatchToProps = dispatch => ({
   },
   updateEvent(id){
     dispatch(actions.updateEvent(id));
+  },
+  deleteEvent(id){
+    dispatch(actions.deleteEvent(id));
   }
 });
 

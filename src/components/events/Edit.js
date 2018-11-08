@@ -6,6 +6,7 @@ export default class EventEdit extends Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
+    this.onDeleteClick = this.onDeleteClick.bind(this);
   }
 
   componentDidMount() {
@@ -22,6 +23,12 @@ export default class EventEdit extends Component {
         { touched && error && <span>{error}</span> }
       </div>
     );
+  }
+
+  async onDeleteClick() {
+    const { id } = this.props.match.params;
+    await this.props.deleteEvent(id);
+    this.props.history.push('/');
   }
 
   async onSubmit(values) {
@@ -43,6 +50,7 @@ export default class EventEdit extends Component {
 
         <input type="submit" value="Submit" disabled={pristine || submitting || invalid} />
         <Link to="/">Cancel</Link>
+        <Link to="/" onClick={this.onDeleteClick}>Delete</Link>
       </form>
     );
   }
