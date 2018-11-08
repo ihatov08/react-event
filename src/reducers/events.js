@@ -4,6 +4,7 @@ import {
   READ_EVENT,
   CREATE_EVENT,
   UPDATE_EVENT,
+  DELETE_EVENT
        } from '../actions';
 
 export default(state = {}, action) => {
@@ -15,6 +16,9 @@ export default(state = {}, action) => {
   case UPDATE_EVENT:
     const event = action.payload.response.data;
     return {...state, [event.id]: event };
+  case DELETE_EVENT:
+    delete state[action.payload.id];
+    return {...state};
   default:
     return state;
   }
