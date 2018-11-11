@@ -876,6 +876,13 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
 
+"@types/react-native@^0.48.7":
+  version "0.48.10"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.48.10.tgz#c808a3ed381b2f5d87f07853ae29def8d4ad9f81"
+  integrity sha512-bLIfTZWizxhLXRYLFEepOKHXTVAtttwQDX3ENgveU2UdfVTLNQfZ9Fg5CtYoTGIV3121uJbtYAy5a6EAEULq4w==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-redux@^5.0.9":
   version "5.0.21"
   resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-5.0.21.tgz#98a3a371dfc22c894889f660d7515717639d20f4"
@@ -885,9 +892,9 @@
     redux "^3.6.0"
 
 "@types/react@*", "@types/react@^16.0.5":
-  version "16.4.18"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.18.tgz#2e28a2e7f92d3fa7d6a65f2b73275c3e3138a13d"
-  integrity sha512-eFzJKEg6pdeaukVLVZ8Xb79CTl/ysX+ExmOfAAqcFlCCK5TgFDD9kWR0S18sglQ3EmM8U+80enjUqbfnUyqpdA==
+  version "16.7.3"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.3.tgz#dd96b19b21c450fab7d136f71d48f4b8fc72777e"
+  integrity sha512-ve/2lnXuLNaTDR1SPvsEX25m+NoNW3PMJxL2jd372UR8oJPwR5+jgtcheUoN27O+qKLFmQy0y0YKRwZcwtny3w==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -4354,7 +4361,7 @@ hoist-non-react-statics@^2.5.0, hoist-non-react-statics@^2.5.4:
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
 
-hoist-non-react-statics@^3.0.0:
+hoist-non-react-statics@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.1.0.tgz#42414ccdfff019cd2168168be998c7b3bd5245c0"
   integrity sha512-MYcYuROh7SBM69xHGqXEwQqDux34s9tz+sCnxJmN18kgWh6JFdTw/5YdZtqsOdZJXddE/wUpCzfEdDrJj8p0Iw==
@@ -7885,12 +7892,12 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
 react-redux@^5.0.6, react-redux@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.1.0.tgz#948b1e2686473d1999092bcfb32d0dc43d33f667"
-  integrity sha512-CRMpEx8+ccpoVxQrQDkG1obExNYpj6dZ1Ni7lUNFB9wcxOhy02tIqpFo4IUXc0kYvCGMu6ABj9A4imEX2VGZJQ==
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.1.1.tgz#88e368682c7fa80e34e055cd7ac56f5936b0f52f"
+  integrity sha512-LE7Ned+cv5qe7tMV5BPYkGQ5Lpg8gzgItK07c67yHvJ8t0iaD9kPFPAli/mYkiyJYrs2pJgExR2ZgsGqlrOApg==
   dependencies:
     "@babel/runtime" "^7.1.2"
-    hoist-non-react-statics "^3.0.0"
+    hoist-non-react-statics "^3.1.0"
     invariant "^2.2.4"
     loose-envify "^1.1.0"
     prop-types "^15.6.1"
@@ -8118,12 +8125,12 @@ redux-thunk@^2.3.0:
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
   integrity sha512-km6dclyFnmcvxhAcrQV2AkZmPQjzPDjgVlQtR0EQjxZPyJ0BnMf3in1ryuR8A2qU0HldVRfxYXbFSKlI3N7Slw==
 
-redux-token-auth@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/redux-token-auth/-/redux-token-auth-0.19.0.tgz#f3fd6cc412c36d600f10be38b4e9c840118a1863"
-  integrity sha512-z+/WX/RIImGZWn/aUIId2D92ULH2bII7tkc9YyBXGKriinyf9zMHjGE5TGHZkSMFjjXmeGzybCsWCJDq7cwmRw==
+"redux-token-auth@https://github.com/kylecorbelli/redux-token-auth.git":
+  version "0.19.1"
+  resolved "https://github.com/kylecorbelli/redux-token-auth.git#9d83b38b6cbcd53e2448fd96c7f694f429eeaf94"
   dependencies:
     "@types/react" "^16.0.5"
+    "@types/react-native" "^0.48.7"
     "@types/react-redux" "^5.0.9"
     axios "^0.16.2"
     react "^15.6.1"

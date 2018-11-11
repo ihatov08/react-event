@@ -19,5 +19,5 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(null, mapDispatchToProps)(
-  reduxForm({ validate, form: 'eventNewFrom'})(EventNew)
+  reduxForm({ validate, form: 'eventNewForm'})(EventNew)
 );

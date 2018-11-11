@@ -3,6 +3,7 @@ import {
   combineReducers,
   applyMiddleware
 } from 'redux';
+import { reduxTokenAuthReducer } from 'redux-token-auth';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
@@ -16,7 +17,8 @@ export default function createStore(history) {
     combineReducers({
       ...reducers,
       router: routerReducer,
-      form: formReducer
+      form: formReducer,
+      reduxTokenAuth: reduxTokenAuthReducer
     }),
     composeWithDevTools(
       applyMiddleware(

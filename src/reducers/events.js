@@ -5,9 +5,11 @@ import {
   CREATE_EVENT,
   UPDATE_EVENT,
   DELETE_EVENT
-       } from '../actions';
+} from '../actions';
 
-export default(state = {}, action) => {
+import initialState from './initial-state';
+
+export default(state = initialState, action) => {
   switch (action.type) {
   case READ_EVENTS:
     return _.mapKeys(action.payload.response.data, 'id');
