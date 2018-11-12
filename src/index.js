@@ -10,6 +10,7 @@ import EventNew from './containers/events/New';
 import EventEdit from './containers/events/Edit';
 import RegistrationNew from './containers/registrations/New';
 import SessionNew from './containers/sessions/New';
+import SessionDestroy from './containers/sessions/Destroy';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { verifyCredentials } from './redux-token-auth-config';
 import { generateRequireSignInWrapper } from 'redux-token-auth';
@@ -26,14 +27,17 @@ verifyCredentials(store);
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Switch>
-        <Route exact path="/events/new" component={EventNew} />
-        <Route exact path="/sign_in"component={SessionNew} />
-        <Route exact path="/" component={requireSignIn(EventList)} />
-        <Route exact path="/events/:id/edit" component={EventEdit} />
-        <Route exact path="/events" component={requireSignIn(EventList)} />
-        <Route exact path="/registrations/new" component={RegistrationNew}/>
-      </Switch>
+      <div>
+        <SessionDestroy />
+        <Switch>
+          <Route exact path="/events/new" component={EventNew} />
+          <Route exact path="/sign_in"component={SessionNew} />
+          <Route exact path="/" component={requireSignIn(EventList)} />
+          <Route exact path="/events/:id/edit" component={EventEdit} />
+          <Route exact path="/events" component={requireSignIn(EventList)} />
+          <Route exact path="/registrations/new" component={RegistrationNew}/>
+        </Switch>
+      </div>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
